@@ -101,13 +101,21 @@ $ ./run
 
 ## How to use this for Egg Vehicle
 
-please refer to the video
+please refer to the video (not available)
 
 [![Public Road Demonstration](http://img.youtube.com/vi/5DaQBZvZwAI/mqdefault.jpg)](https://www.youtube.com/watch?v=5DaQBZvZwAI)
 
-
-
-
+Steps:
+- 1. Open the LiDAR driver in https://github.com/weisongwen/15_velodyne. if you have any questions about the connection between               the computer and the 3D LiDAR, you can refer to the https://github.com/weisongwen/15_velodyne.
+- 2. connect the egg vehicle to the computer by run the launch file in /home/wenws/Autoware/ros/src/computing/perception/localization/packages/ivactuator/launch directory (change the directory as you may need) starup.launch, using the follwoing command.
+```
+$ roslaunch startup.launch
+```
+- 3. implemment the ndt_matching-based localization based on Autoware UI.
+- 4. run the egg vehicle control node in the /home/wenws/Autoware/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching using the following command.
+```
+$ python eggvehiclecontrol.py
+```
 
 ## For Developers
 

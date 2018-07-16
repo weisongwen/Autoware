@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<launch>
+    <node name="ivactuator" pkg="ivactuator" type="ivactuator" output="screen"/>
+    <param name="mcudevice" value="0" type="int"/>                  <!--0:xp100 -->
+    <param name="mcuserialport" value="/dev/ttyS0" type="string"/>
+    <param name="mcubaudrate" value="9600" type="int"/>             <!--xp100:9600 -->
+    <param name="runningmode" value = "0" type = "int"/>            <!--0:dpcar 1:vrep-->
+    <param name="updatelog" value="1.fix version" type="string"/> 
+    <param name="bdebug" value = "true" type = "bool" />            <!--true:print debug info, false:not print debug info -->
+</launch>

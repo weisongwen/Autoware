@@ -1,0 +1,6 @@
+int16 TargetSteeringAngle
+int16 TargetVehicleSpeed
+uint8 TargetSteeringSpeed
+uint8 SpeedGear
+uint8 TargetLedStatus
+uint8 LightSwitch

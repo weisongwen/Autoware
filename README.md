@@ -21,19 +21,6 @@ Software for urban autonomous driving, firstly developed by [Tier IV](http://www
 - Software Simulation
 - Virtual Reality
 
-Autoware is protected by the BSD License. Please use it on at your own discretion. For safe use, we provide a ROSBAG-based simulation method for those who do not own real autonomous vehicles. In case you use Autoware with real autonomous vehicles, **please formulate safety measures and assessment of risk before field testing.**
-
-## Manuals and Documents
-
-Free manuals can be found at [https://github.com/CPFL/Autoware-Manuals](https://github.com/CPFL/Autoware-Manuals). You are encouraged to join maintenance of those manuals. Thanks for your cooperation!
-
-See also Autoware/docs for the tips of Autoware development, including the coding style and branching model.
-
-## License
-
-* New BSD License
-    * See LICENSE
-
 ## Spec Recommendation
 
 - Number of CPU cores: 8
@@ -49,8 +36,6 @@ See also Autoware/docs for the tips of Autoware development, including the codin
 - FlyCapture2 (Optional)
 - Armadillo (Optional)
 
-**Please use checkout revision before 2015/OCT/21 if you use Autoware on ROS hydro or Ubuntu 13.04, 13.10.**
-
 ### Install dependencies for Ubuntu 14.04 indigo
 
 ```
@@ -61,12 +46,6 @@ See also Autoware/docs for the tips of Autoware development, including the codin
 
 **NOTE: Please do not install ros-indigo-velodyne-pointcloud package. Please uninstall it if you already installed.**
 
-### Install dependencies for Ubuntu 16.04 kinetic
-```
-% sudo apt-get install ros-kinetic-desktop-full ros-kinetic-nmea-msgs ros-kinetic-nmea-navsat-driver ros-kinetic-sound-play ros-kinetic-jsk-visualization ros-kinetic-grid-map ros-kinetic-gps-common
-% sudo apt-get install ros-kinetic-controller-manager ros-kinetic-ros-control ros-kinetic-ros-controllers ros-kinetic-gazebo-ros-control ros-kinetic-joystick-drivers
-% sudo apt-get install libnlopt-dev freeglut3-dev qtbase5-dev libqt5opengl5-dev libssh2-1-dev libarmadillo-dev libpcap-dev gksu libgl1-mesa-dev libglew-dev python-wxgtk3.0
-```
 
 **NOTE: Following packages are not supported in ROS Kinetic.**
 - gazebo
@@ -117,49 +96,6 @@ $ roslaunch startup.launch
 $ python eggvehiclecontrol.py
 ```
 
-## For Developers
-
-Be careful when changing files under `ros/src/sensing/drivers/lidar/packages/velodyne`. There is **subtree**.
-The original repository is [here](https://github.com/CPFL/velodyne). If you change those files from this
-repository, you must use **git subtree push**. (Please never change and push code if you don't understand
-`git subtree` well).
-
-GitFlow, the git branching model, is used in the Autoware repository.
-- When you adding new features, you can branch off your feature branch from `develop`.  
-  you can use the following command.  
-  `$ git checkout -b feature/[your_branch_name] develop`
-- When you find bugs in `master`, you can branch off your hotfix branch from `master`.  
-  you can use the following command.  
-  `$ git checkout -b hotfix/[your_branch_name] master`
-
-See [docs/en/branching_model.md](docs/en/branching_model.md)
-
-More details [here](http://nvie.com/posts/a-successful-git-branching-model/)
-
-## Main Packages
-
-### Localization
-- ndt_localizer
-- icp_localizer
-
-### Detection
-- lidar_tracker
-- cv_tracker
-- road_wizard
-
-### Mission (Global) Planning
-- lane_planner
-- way_planner
-- freespace_planner
-
-### Motion (Local) Planning
-- astar_planner
-- lattice_planner
-- dp_planner
-
-### Vehicle Control
-- waypoint_follower
-- waypoint_maker
 
 ## Research Papers for Citation
 
@@ -220,26 +156,4 @@ More details [here](http://nvie.com/posts/a-successful-git-branching-model/)
 ### Ftrace
 [![Ftrace](http://img.youtube.com/vi/RoIqKgerDUw/mqdefault.jpg)](https://youtu.be/RoIqKgerDUw)
 
-## Sample Data
 
-[3D map of Moriyama in Nagoya](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_data.tar.gz)
-
-[ROSBAG data of Moriyama driving](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_150324.tar.gz)
-
-[Script for generating demo launch files of Moriyama](http://db3.ertl.jp/autoware/sample_data/my_launch.sh)
-
-[ROSBAG data for Calibration](http://db3.ertl.jp/autoware/sample_data/kotacho-calibration-sample_20160621.bag.bz2)
-
-## IROS 2016 Data
-
-[ROSBAG data of Nagoya driving](http://db3.ertl.jp/autoware/sample_data/iros2016_two_vehicle_data.tar.gz)
-
-## Contact
-
-Autoware Developers (<autoware@googlegroups.com>)
-
-Autoware Developers Slack Team (https://autoware.herokuapp.com/)
-
-To subscribe to the Autoware Developers mailing list,
-- If you have a Google account, go to https://groups.google.com/d/forum/autoware, and click the **Apply to Join Group** button.
-- If you don't have a Google account, send an email to autoware+subscribe@googlegroups.com.

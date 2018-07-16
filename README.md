@@ -1,6 +1,6 @@
 # Autoware for autonomous vehicle
 
-Software for urban autonomous driving, firstly developed by [Tier IV](http://www.tier4.jp). The following functions are supported:
+Software for urban autonomous driving, firstly developed by [Tier IV](http://www.tier4.jp) and then the package is customized for egg vehicle. The following functions are supported:
 
 - 3D Localization
 - 3D Mapping
@@ -101,8 +101,8 @@ $ ./run
 
 ## How to use this for Egg Vehicle
 
+please refer to the video
 
-please refer to the video 
 [![Public Road Demonstration](http://img.youtube.com/vi/5DaQBZvZwAI/mqdefault.jpg)](https://www.youtube.com/watch?v=5DaQBZvZwAI)
 
 

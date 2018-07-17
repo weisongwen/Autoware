@@ -4,22 +4,9 @@ Software for urban autonomous driving, firstly developed by [Tier IV](http://www
 
 - 3D Localization
 - 3D Mapping
-- Path Planning
 - Path Following
-- Accel/Brake/Steering Control
-- Data Logging
-- Car/Pedestrian/Object Detection
-- Traffic Signal Detection
-- Traffic Light Recognition
-- Lane Detection
-- Object Tracking
-- Sensor Calibration
-- Sensor Fusion
-- Cloud-oriented Maps
-- Connected Automation
-- Smartphone Navigation
-- Software Simulation
-- Virtual Reality
+- Motion/Steering Control
+- Object Detection
 
 ## Spec Recommendation
 
@@ -29,7 +16,7 @@ Software for urban autonomous driving, firstly developed by [Tier IV](http://www
 
 ## Requirements
 
-- ROS indigo (Ubuntu 14.04) or ROS jade (Ubuntu 15.04) or ROS kinetic (Ubuntu 16.04)
+- ROS jade (Ubuntu 14.04)
 - OpenCV 2.4.10 or higher
 - Qt 5.2.1 or higher
 - CUDA(Optional)
@@ -39,8 +26,8 @@ Software for urban autonomous driving, firstly developed by [Tier IV](http://www
 ### Install dependencies for Ubuntu 14.04 indigo
 
 ```
-% sudo apt-get install ros-indigo-desktop-full ros-indigo-nmea-msgs ros-indigo-nmea-navsat-driver ros-indigo-sound-play ros-indigo-jsk-visualization ros-indigo-grid-map ros-indigo-gps-common
-% sudo apt-get install ros-indigo-controller-manager ros-indigo-ros-control ros-indigo-ros-controllers ros-indigo-gazebo-ros-control ros-indigo-sicktoolbox ros-indigo-sicktoolbox-wrapper ros-indigo-joystick-drivers ros-indigo-novatel-span-driver
+% sudo apt-get install ros-jade-desktop-full ros-jade-nmea-msgs ros-jade-nmea-navsat-driver ros-jade-sound-play ros-jade-jsk-visualization ros-jade-grid-map ros-jade-gps-common
+% sudo apt-get install ros-jade-controller-manager ros-jade-ros-control ros-jade-ros-controllers ros-jade-gazebo-ros-control ros-jade-sicktoolbox ros-jade-sicktoolbox-wrapper ros-jade-joystick-drivers ros-jade-novatel-span-driver
 % sudo apt-get install libnlopt-dev freeglut3-dev qtbase5-dev libqt5opengl5-dev libssh2-1-dev libarmadillo-dev libpcap-dev gksu libgl1-mesa-dev libglew-dev
 ```
 
@@ -56,20 +43,12 @@ Software for urban autonomous driving, firstly developed by [Tier IV](http://www
 
 ```
 $ cd $HOME
-$ git clone https://github.com/CPFL/Autoware.git
+$ git clone https://github.com/weisongwen/Autoware.git
 $ cd ~/Autoware/ros/src
 $ catkin_init_workspace
 $ cd ../
 $ ./catkin_make_release
 ```
-###Caffe based object detectors
-CV based detectors RCNN and SSD nodes are not automatically built.
-
-To build these nodes please follow the respective node's README
-[SSD](ros/src/computing/perception/detection/packages/cv_tracker/nodes/ssd/README.md)
-[RCNN](ros/src/computing/perception/detection/lib/image/librcnn/README.md)
-[Yolo2](ros/src/computing/perception/detection/packages/cv_tracker/nodes/yolo2/README.md)
-
 
 ## How to Start
 
@@ -97,11 +76,11 @@ $ python eggvehiclecontrol.py
 ```
 
 
-## Research Papers for Citation
+## Research Papers for Reference
 
 1. S. Kato, E. Takeuchi, Y. Ishiguro, Y. Ninomiya, K. Takeda, and T. Hamada. "An Open Approach to Autonomous Vehicles", IEEE Micro, Vol. 35, No. 6, pp. 60-69, 2015. [![Link](http://online.qmags.com/MIC1115/default.aspx?sessionID=7CF18C36BF00A40746B87387B&cid=3230522&eid=19656&pg=62&mode=2#pg62&mode2)](http://online.qmags.com/MIC1115/default.aspx?sessionID=7CF18C36BF00A40746B87387B&cid=3230522&eid=19656&pg=62&mode=2#pg62&mode2)
 
-## Demo Videos
+## Demo Videos provided by the Autoware
 
 ### Public Road Demonstration
 [![Public Road Demonstration](http://img.youtube.com/vi/5DaQBZvZwAI/mqdefault.jpg)](https://www.youtube.com/watch?v=5DaQBZvZwAI)

@@ -102,21 +102,6 @@ $ python eggvehiclecontrol.py
 ### Mapping
 [![Mapping](http://img.youtube.com/vi/HlQ0ohxvlgA/mqdefault.jpg)](https://www.youtube.com/watch?v=HlQ0ohxvlgA)
 
-### Detection with SSD
-[![SSD](http://img.youtube.com/vi/EjamMJjkjBA/mqdefault.jpg)](https://youtu.be/EjamMJjkjBA)
-
-### Detection with Yolo2
-[![Yolo2](http://img.youtube.com/vi/gG_ojWOmDO0/mqdefault.jpg)](https://youtu.be/gG_ojWOmDO0)
-
-### Detection with DPM
-[![DPM](http://img.youtube.com/vi/P_BFQNbudlg/mqdefault.jpg)](https://youtu.be/P_BFQNbudlg)
-
-### Detection with Euclidean Clustering
-[![Clustering](http://img.youtube.com/vi/Tma2DKMxt4Y/mqdefault.jpg)](https://youtu.be/Tma2DKMxt4Y)
-
-### Traffic Light Recognition
-[![Traffic Light Recognition](http://img.youtube.com/vi/KmOdBms9r2w/mqdefault.jpg)](https://youtu.be/KmOdBms9r2w)
-
 ### Planning with ROSBAG
 [![Planning with ROSBAG](http://img.youtube.com/vi/LZTCDbcjIdw/mqdefault.jpg)](https://www.youtube.com/watch?v=LZTCDbcjIdw)
 
@@ -125,9 +110,6 @@ $ python eggvehiclecontrol.py
 
 ### Planning with Hybrid State A*
 [![Planning with wf_simulator](http://img.youtube.com/vi/1WiqAHZHj8U/mqdefault.jpg)](https://www.youtube.com/watch?v=1WiqAHZHj8U)
-
-### Calibration Toolkit
-[![Calibration Toolkit](http://img.youtube.com/vi/pfBmfgHf6zg/mqdefault.jpg)](https://www.youtube.com/watch?v=pfBmfgHf6zg)
 
 ### Data Processor for Bag File
 [![Data Processor](http://img.youtube.com/vi/M38Obmy-3Ko/mqdefault.jpg)](https://youtu.be/M38Obmy-3Ko)

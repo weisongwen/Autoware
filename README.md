@@ -5,7 +5,7 @@ This package is now customized for egg vehicle. The following functions are supp
 
 - 3D Localization
 - 3D Mapping
-- Path Following
+- Path Following (under test)
 - Motion/Steering Control
 - Object Detection
 

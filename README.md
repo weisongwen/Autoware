@@ -24,7 +24,11 @@ This package is now customized for egg vehicle. The following functions are supp
 - FlyCapture2 (Optional)
 - Armadillo (Optional)
 
+<<<<<<< HEAD
 ### Install dependencies for Ubuntu 14.04 jade
+=======
+### Install dependencies for Ubuntu 14.04 indigo
+>>>>>>> 7d65add875ee18f6d8db032440963738929d94a8
 
 ```
 % sudo apt-get install ros-jade-desktop-full ros-jade-nmea-msgs ros-jade-nmea-navsat-driver ros-jade-sound-play ros-jade-jsk-visualization ros-jade-grid-map ros-jade-gps-common

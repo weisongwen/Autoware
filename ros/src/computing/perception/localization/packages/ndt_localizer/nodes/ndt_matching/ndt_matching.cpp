@@ -513,7 +513,7 @@ static void initialpose_callback(const geometry_msgs::PoseWithCovarianceStamped:
 
 static void imu_odom_calc(ros::Time current_time)
 {
-  static ros::Time previous_time = current_time;
+  static ros::Time previous_time = current_time; // i think this is a bug ?
   double diff_time = (current_time - previous_time).toSec();
 
   double diff_imu_roll  = imu.angular_velocity.x * diff_time;
@@ -557,7 +557,7 @@ static void odom_calc(ros::Time current_time)
   current_pose_odom.pitch += diff_odom_pitch;
   current_pose_odom.yaw   += diff_odom_yaw;
 
-  double diff_distance = odom.twist.twist.linear.x * diff_time;
+  double diff_distance = odom.twist.twist.linear.x * diff_time; // fixed velocity model
   offset_odom_x += diff_distance*cos(-current_pose_odom.pitch)*cos(current_pose_odom.yaw);
   offset_odom_y += diff_distance*cos(-current_pose_odom.pitch)*sin(current_pose_odom.yaw);
   offset_odom_z += diff_distance*sin(-current_pose_odom.pitch);
@@ -1202,7 +1202,8 @@ static void points_callback(const sensor_msgs::PointCloud2::ConstPtr& input)
     std::cout << "Transformation Probability: " << ndt.getTransformationProbability() << std::endl;
     std::cout << "Execution Time: " << exe_time << " ms." << std::endl;
     std::cout << "Number of Iterations: " << ndt.getFinalNumIteration() << std::endl;
-    std::cout << "NDT Reliability: " << ndt_reliability.data << std::endl;
+    std::cout << "NDT Integrated Reliability: " << ndt_reliability.data << std::endl;
+    std::cout << "trans_probability: " << trans_probability << std::endl;
     std::cout << "(x,y,z,roll,pitch,yaw): " << std::endl;
     std::cout << "(" << current_pose.x << ", " << current_pose.y << ", " << current_pose.z << ", " << current_pose.roll
               << ", " << current_pose.pitch << ", " << current_pose.yaw << ")" << std::endl;
@@ -1276,6 +1277,7 @@ static void points_callback(const sensor_msgs::PointCloud2::ConstPtr& input)
   }
 }
 
+//Add by WEN WS
 static void navsat_odom_sub_callback(const nav_msgs::Odometry::ConstPtr& msg)
 {
   navsatOdomPoseOdom=*msg;

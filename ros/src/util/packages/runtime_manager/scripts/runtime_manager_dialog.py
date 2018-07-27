@@ -379,7 +379,7 @@ class MyFrame(rtmgr.MyFrame):
 		#
 		self.bitmap_logo.Destroy()
 		# bm = scaled_bitmap(wx.Bitmap(rtmgr_src_dir() + 'autoware_logo_1.png'), 0.2)
-		bm = scaled_bitmap(wx.Bitmap(rtmgr_src_dir() + 'PolyU_Logo.png'), 0.35)
+		bm = scaled_bitmap(wx.Bitmap(rtmgr_src_dir() + 'nogoya_university.png'), 0.35)
 		self.bitmap_logo = wx.StaticBitmap(self, wx.ID_ANY, bm)
 
 		rtmgr.MyFrame.__do_layout(self)
